@@ -22,8 +22,9 @@ public class CategoryController {
     @RequestMapping(value = "")
     public String index(Model model){
 
-        model.addAttribute("title","'Categories' works!!");        model.addAttribute("categories", categoryDao.findAll());
-        return "index";
+        model.addAttribute("title","'Categories' works!!");
+        model.addAttribute("categories", categoryDao.findAll());
+        return "category/index";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
@@ -42,8 +43,7 @@ public class CategoryController {
 
         categoryDao.save(category);
 
-
-        return "category/add";
+        return "redirect:";
     }
 
 }

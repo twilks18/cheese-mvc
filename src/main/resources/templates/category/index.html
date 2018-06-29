@@ -10,7 +10,7 @@
 
 <ul>
     <!-- retrieves a list of categories-->
-    <li th:each = "category :${categories}"></li>
+    <li th:each = "category :${categories}"><span th:text="${category.name}"></span></li>
 </ul>
 
 <a href="/category/add">Add Category</a>
